@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+.venv/
+venv/
+
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+.vscode/
+.idea/
+
+# bancos criados ao testar o shell
+*.snapshot
+*.snapshot.tmp
+wal.log
+escola/
