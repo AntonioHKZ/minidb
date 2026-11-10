@@ -76,7 +76,9 @@ Como biblioteca:
 from minidb import Database
 
 with Database("dados") as db:
-    db.execute("CREATE TABLE IF NOT EXISTS tarefas (id INTEGER PRIMARY KEY, titulo TEXT, feita BOOLEAN)")
+    db.execute(
+        "CREATE TABLE IF NOT EXISTS tarefas (id INTEGER PRIMARY KEY, titulo TEXT, feita BOOLEAN)"
+    )
     db.execute("INSERT INTO tarefas VALUES (1, 'estudar B+ tree', FALSE)")
     for id_, titulo in db.query("SELECT id, titulo FROM tarefas WHERE NOT feita"):
         print(id_, titulo)
